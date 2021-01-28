@@ -178,6 +178,14 @@ public class Properties extends Xlsreader
 	
 	public By TextRemuneration=By.xpath("//input[@type='number'][@placeholder='Amount']");
 	
+	public By TextLastDate=By.xpath("//input[@name='applnEndDate']");
+	
+	public By TextNoOfOpenings=By.xpath("//input[@name='noOfOpenings']");
+	
+	public By SelectProjectSpecilization=By.xpath("(//input[@class='searchBox'])[3]");
+	
+	public By SelectProjectSkills=By.xpath("(//input[@class='searchBox'])[4]");
+	
 	public By ClickSignOut=By.xpath("//a[text()='Sign Out']");
 	
 	public By ClickLoginSP=By.xpath("//input[@type='tel']");
