@@ -154,6 +154,8 @@ public class Properties extends Xlsreader
 	
 	public By clickAddJob=By.xpath("//a[text()='Job']");
 	
+	public By TextJobTitle=By.xpath("//input[@name='title']");
+	
 	public By ClickSignOut=By.xpath("//a[text()='Sign Out']");
 	
 	public By ClickLoginSP=By.xpath("//input[@type='tel']");
