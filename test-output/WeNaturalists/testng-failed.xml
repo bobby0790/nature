@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [WeNaturalists]">
+  <test thread-count="5" name="Profile Edit(failed)">
+    <classes>
+      <class name="testcases.ProfileEditPage.CircleCreation">
+        <methods>
+          <include name="endTest"/>
+          <include name="circlecreation" invocation-numbers="0"/>
+          <include name="endSuite"/>
+          <include name="startTest"/>
+          <include name="startSuite"/>
+        </methods>
+      </class> <!-- testcases.ProfileEditPage.CircleCreation -->
+    </classes>
+  </test> <!-- Profile Edit(failed) -->
+</suite> <!-- Failed suite [WeNaturalists] -->
