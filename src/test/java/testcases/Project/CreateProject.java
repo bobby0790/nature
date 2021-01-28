@@ -20,6 +20,12 @@ public class CreateProject extends BaseTest
 		wait(1);
 		clickElement(ClickLoginBtn);
 		wait(1);
+		clickElement(ClickProject);
+		wait(1);
+		clickElement(clickAddNewProject);
+		wait(1);
+		clickElement(clickAddJob);
+		wait(1);
 		
 	}
 
