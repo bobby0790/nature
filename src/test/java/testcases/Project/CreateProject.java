@@ -26,7 +26,7 @@ public class CreateProject extends BaseTest
 		wait(1);
 		clickElement(clickAddJob);
 		wait(1);
-		
+//		clickElement(ClickAddForum);
 	}
 
 }
