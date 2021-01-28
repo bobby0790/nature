@@ -148,6 +148,12 @@ public class Properties extends Xlsreader
 	
 	public By ClickCircleSubmit=By.xpath("(//button[text()='Continue'])[6]");
 	
+	public By ClickProject=By.xpath("(//a[@href='/project'])[1]");
+	
+	public By clickAddNewProject=By.xpath("//span[text()='Add New']");
+	
+	public By clickAddJob=By.xpath("//a[text()='Job']");
+	
 	public By ClickSignOut=By.xpath("//a[text()='Sign Out']");
 	
 	public By ClickLoginSP=By.xpath("//input[@type='tel']");
