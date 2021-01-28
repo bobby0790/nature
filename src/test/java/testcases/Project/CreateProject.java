@@ -10,7 +10,7 @@ import resources.BaseTest;
 public class CreateProject extends BaseTest
 {
 	@Test(dataProvider="getData")
-	public void createProject(String tdid, String username, String password, String Title, String CompanyName, String WebSiteName, String BriefDescription, String DetailedDescription, String RolesAndResponsibilities, String CountryName, String StateName, String CityName, String StartDate, String Remuneration) throws Exception
+	public void createProject(String tdid, String username, String password, String Title, String CompanyName, String WebSiteName, String BriefDescription, String DetailedDescription, String RolesAndResponsibilities, String CountryName, String StateName, String CityName, String StartDate, String Remuneration, String LastDate, String NoOfOpenings, String Specilization, String Skills) throws Exception
 	{
 		test = extent.createTest("Post as Circle");
 		test.pass("Start the Browser");
@@ -23,7 +23,7 @@ public class CreateProject extends BaseTest
 		sendkeys(TextPassword,password);
 		wait(1);
 		clickElement(ClickLoginBtn);
-		wait(3);
+		wait(5);
 		clickElement(ClickProject);
 		wait(1);
 		clickElement(clickAddNewProject);
@@ -62,6 +62,20 @@ public class CreateProject extends BaseTest
 		sendkeys(TextStartDate, StartDate);
 		wait(1);
 		sendkeys(TextRemuneration, Remuneration);
+		wait(1);
+		sendKeys(TextLastDate, LastDate);
+		wait(1);
+		sendkeys(TextNoOfOpenings, NoOfOpenings);
+		wait(1);
+		clickElement(SelectProjectSpecilization);
+		wait(1);
+		WebElement specilization=driver.findElement(By.xpath("(//*[text()='"+Specilization+"'])[1]"));
+		specilization.click();
+		wait(1);
+		clickElement(SelectProjectSkills);
+		wait(1);
+		WebElement skills=driver.findElement(By.xpath("(//*[text()='"+Skills+"'])[4]"));
+		skills.click();
 		wait(10);
 	}
 }
