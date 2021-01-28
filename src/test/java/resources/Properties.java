@@ -156,6 +156,28 @@ public class Properties extends Xlsreader
 	
 	public By TextJobTitle=By.xpath("//input[@name='title']");
 	
+	public By TextCompanyName=By.xpath("//input[@name='companyName']");
+	
+	public By TextWebSiteName=By.xpath("//input[@name='website']");
+	
+	public By TextBriefDescription=By.xpath("//textarea[@name='shortBrief']");
+	
+	public By TextDetailedDescription=By.xpath("//textarea[@name='detailedDescription']");
+	
+	public By ClickAttachment=By.xpath("//a[@class='attachfile']");
+	
+	public By TextRolesAndResponsibilities=By.xpath("//textarea[@name='role']");
+	
+	public By SelectProjectCountry=By.xpath("(//div[@class=' css-1hwfws3'])[1]");
+	
+	public By SelectProjectState=By.xpath("(//div[@class=' css-1hwfws3'])[2]");
+	
+	public By SelectProjectCity=By.xpath("(//div[@class=' css-1hwfws3'])[3]");
+	
+	public By TextStartDate=By.xpath("//input[@name='durationStartDate']");
+	
+	public By TextRemuneration=By.xpath("//input[@type='number'][@placeholder='Amount']");
+	
 	public By ClickSignOut=By.xpath("//a[text()='Sign Out']");
 	
 	public By ClickLoginSP=By.xpath("//input[@type='tel']");
