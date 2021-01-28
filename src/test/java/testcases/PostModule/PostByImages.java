@@ -24,7 +24,7 @@ public class PostByImages extends BaseTest
 		wait(2);
 		clickElement(ClickPostImageBtn);
 		robotMethod("D:\\Downloads\\Causes\\Bird Conservation.png");
-		wait(5);
+		wait(1);
 		clickElement(ClickPostImagePreviewClose);
 		wait(2);
 		clickElement(ClickPostImageBtn);
