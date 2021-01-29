@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="88589" started-at="2021-01-29T06:34:48Z" finished-at="2021-01-29T06:36:17Z">
+  <suite name="Default suite" duration-ms="99411" started-at="2021-01-29T11:20:38Z" finished-at="2021-01-29T11:22:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="88589" started-at="2021-01-29T06:34:48Z" finished-at="2021-01-29T06:36:17Z">
+    <test name="Default test" duration-ms="99411" started-at="2021-01-29T11:20:38Z" finished-at="2021-01-29T11:22:18Z">
       <class name="testcases.Project.CreateProject">
-        <test-method status="PASS" signature="startSuite()[pri:0, instance:testcases.Project.CreateProject@140e5a13]" name="startSuite" is-config="true" duration-ms="157" started-at="2021-01-29T06:34:48Z" finished-at="2021-01-29T06:34:48Z">
+        <test-method status="PASS" signature="startSuite()[pri:0, instance:testcases.Project.CreateProject@f381794]" name="startSuite" is-config="true" duration-ms="175" started-at="2021-01-29T11:20:38Z" finished-at="2021-01-29T11:20:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSuite -->
-        <test-method status="PASS" signature="startTest()[pri:0, instance:testcases.Project.CreateProject@140e5a13]" name="startTest" is-config="true" duration-ms="235" started-at="2021-01-29T06:34:50Z" finished-at="2021-01-29T06:34:50Z">
+        <test-method status="PASS" signature="startTest()[pri:0, instance:testcases.Project.CreateProject@f381794]" name="startTest" is-config="true" duration-ms="211" started-at="2021-01-29T11:20:41Z" finished-at="2021-01-29T11:20:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="FAIL" signature="createProject(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.Project.CreateProject@140e5a13]" name="createProject" duration-ms="83841" started-at="2021-01-29T06:34:50Z" data-provider="getData" finished-at="2021-01-29T06:36:14Z">
+        <test-method status="PASS" signature="createProject(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.Project.CreateProject@f381794]" name="createProject" duration-ms="94746" started-at="2021-01-29T11:20:41Z" data-provider="getData" finished-at="2021-01-29T11:22:16Z">
           <params>
             <param index="0">
               <value>
@@ -107,81 +107,97 @@
                 <![CDATA[Bird Spotting]]>
               </value>
             </param>
+            <param index="18">
+              <value>
+                <![CDATA[auto1]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[auto2]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[auto3]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[auto4]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[auto5]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[B Tech]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[http://dev.wenat.beegram.in/project]]>
+              </value>
+            </param>
           </params>
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=88.0.4324.104)
-Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'WSE007', ip: '192.168.1.195', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}), userDataDir=C:\Users\Durga.DESKTOP-5TE2TID\AppData\Local\Temp\scoped_dir13260_1875791612}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:52417}, acceptInsecureCerts=false, browserVersion=88.0.4324.104, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:virtualAuthenticators=true}]
-Session ID: 96132b78bd40606696a0267f7c1b5f27]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=88.0.4324.104)
-Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'WSE007', ip: '192.168.1.195', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}), userDataDir=C:\Users\Durga.DESKTOP-5TE2TID\AppData\Local\Temp\scoped_dir13260_1875791612}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:52417}, acceptInsecureCerts=false, browserVersion=88.0.4324.104, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:virtualAuthenticators=true}]
-Session ID: 96132b78bd40606696a0267f7c1b5f27
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:275)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-at testcases.Project.CreateProject.createProject(CreateProject.java:77)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createProject -->
-        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:testcases.Project.CreateProject@140e5a13]" name="endTest" is-config="true" duration-ms="1572" started-at="2021-01-29T06:36:15Z" finished-at="2021-01-29T06:36:17Z">
+        <test-method status="PASS" signature="endTest(org.testng.ITestResult)[pri:0, instance:testcases.Project.CreateProject@f381794]" name="endTest" is-config="true" duration-ms="1800" started-at="2021-01-29T11:22:16Z" finished-at="2021-01-29T11:22:18Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createProject status=FAILURE method=CreateProject.createProject(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.Project.CreateProject@140e5a13] output={null}]]]>
+                <![CDATA[[TestResult name=createProject status=SUCCESS method=CreateProject.createProject(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.Project.CreateProject@f381794] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-        <test-method status="PASS" signature="endSuite()[pri:0, instance:testcases.Project.CreateProject@140e5a13]" name="endSuite" is-config="true" duration-ms="516" started-at="2021-01-29T06:36:17Z" finished-at="2021-01-29T06:36:18Z">
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:testcases.Project.CreateProject@f381794]" name="endSuite" is-config="true" duration-ms="652" started-at="2021-01-29T11:22:18Z" finished-at="2021-01-29T11:22:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSuite -->

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -12,7 +13,7 @@ import resources.BaseTest;
 public class CreateProject extends BaseTest
 {
 	@Test(dataProvider="getData")
-	public void createProject(String tdid, String username, String password, String Title, String CompanyName, String WebSiteName, String BriefDescription, String DetailedDescription, String RolesAndResponsibilities, String CountryName, String StateName, String CityName, String StartDate, String Remuneration, String LastDate, String NoOfOpenings, String Specilization, String Skills) throws Exception
+	public void createProject(String tdid, String username, String password, String Title, String CompanyName, String WebSiteName, String BriefDescription, String DetailedDescription, String RolesAndResponsibilities, String CountryName, String StateName, String CityName, String StartDate, String Remuneration, String LastDate, String NoOfOpenings, String Specilization, String Skills, String HashTags1, String HashTags2, String HashTags3, String HashTags4, String HashTags5, String HashTags6, String Qualification1, String Qualification2, String Qualification3, String Qualification4, String Qualification5, String Inclusions, String Exclusions, String Remarks, String MediaCoverage) throws Exception
 	{
 		test = extent.createTest("Post as Circle");
 		test.pass("Start the Browser");
@@ -42,9 +43,9 @@ public class CreateProject extends BaseTest
 		wait(1);
 		sendkeys(TextDetailedDescription, DetailedDescription);
 		wait(1);
-		/*clickElement(ClickAttachment);
+		clickElement(ClickAttachment);
 		robotMethod("D:\\Downloads\\Causes\\Bird Conservation.png");
-		wait(1);*/
+		wait(1);
 		sendkeys(TextRolesAndResponsibilities, RolesAndResponsibilities);
 		wait(1);
 		clickElement(SelectProjectCountry);
@@ -69,8 +70,9 @@ public class CreateProject extends BaseTest
 		wait(1);
 		sendkeys(TextNoOfOpenings, NoOfOpenings);
 		wait(1);
-		clickElement(SelectProjectSpecilization);
+		/*clickElement(SelectProjectSpecilization);
 		wait(5);
+		driver.findElement(By.xpath("/html/body/div[2]/div/div/div/main/div[2]/div/div/div/div/form/div[9]/div/div[2]/ul/li[1]")).click();
 		List<WebElement> special=driver.findElements(By.xpath("(//ul[@class='optionContainer'])[3]"));
 		System.out.println(special.size());
 		WebElement specilization=driver.findElement(By.xpath("//*[text()='"+Specilization+"']"));
@@ -80,6 +82,40 @@ public class CreateProject extends BaseTest
 		wait(1);
 		WebElement skills=driver.findElement(By.xpath("(//*[text()='"+Skills+"'])[4]"));
 		skills.click();
-		wait(10);
+		wait(1);
+		*/if(!HashTags1.equals("") || !HashTags2.equals("") || !HashTags3.equals("") || !HashTags4.equals("") || !HashTags5.equals("") || !HashTags6.equals(""))
+		{
+			String []hashtags=new String[]{HashTags1,HashTags2,HashTags3,HashTags4,HashTags5,HashTags6};
+			for(int j=0;j<6;j++)
+			{
+				if(hashtags[j]!="")
+				{
+					WebElement dri=driver.findElement(By.xpath("//input[@class='ReactTags__tagInputField']"));
+					dri.sendKeys(hashtags[j]);
+					dri.sendKeys(Keys.ENTER);
+				}
+			}
+		}
+		wait(1);
+		String[] qualification=new String[]{ Qualification1, Qualification2, Qualification3, Qualification4, Qualification5};
+		for(int j=0;j<5;j++)
+		{
+			if(qualification[j]!="")
+			driver.findElement(By.xpath("//input[contains(@id,'qualification')]")).click();
+			clickElement(ClickQualificationAddMore);
+		}
+		wait(1);
+		sendkeys(TextInclusions, Inclusions);
+		wait(1);
+		sendkeys(TextExclusions, Exclusions);
+		wait(1);
+		sendkeys(TextRemarks, Remarks);
+		wait(1);
+		sendkeys(TextMediaCoverage, MediaCoverage);
+		wait(1);
+		clickElement(ClickProAgree);
+		wait(1);
+		clickElement(ClickPublish);
+		wait(3);
 	}
 }
