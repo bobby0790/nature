@@ -182,9 +182,9 @@ public class Properties extends Xlsreader
 	
 	public By TextNoOfOpenings=By.xpath("//input[@name='noOfOpenings']");
 	
-	public By SelectProjectSpecilization=By.xpath("(//input[@class='searchBox'])[3]");
+	public By SelectProjectSpecilization=By.xpath("(//div[@id='multiselectContainerReact'])[3]");
 	
-	public By SelectProjectSkills=By.xpath("(//input[@class='searchBox'])[4]");
+	public By SelectProjectSkills=By.xpath("(//div[@id='multiselectContainerReact'])[4]");
 	
 	public By ClickSignOut=By.xpath("//a[text()='Sign Out']");
 	

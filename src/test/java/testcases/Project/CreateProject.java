@@ -1,5 +1,7 @@
 package testcases.Project;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -40,9 +42,9 @@ public class CreateProject extends BaseTest
 		wait(1);
 		sendkeys(TextDetailedDescription, DetailedDescription);
 		wait(1);
-		clickElement(ClickAttachment);
+		/*clickElement(ClickAttachment);
 		robotMethod("D:\\Downloads\\Causes\\Bird Conservation.png");
-		wait(1);
+		wait(1);*/
 		sendkeys(TextRolesAndResponsibilities, RolesAndResponsibilities);
 		wait(1);
 		clickElement(SelectProjectCountry);
@@ -68,8 +70,10 @@ public class CreateProject extends BaseTest
 		sendkeys(TextNoOfOpenings, NoOfOpenings);
 		wait(1);
 		clickElement(SelectProjectSpecilization);
-		wait(1);
-		WebElement specilization=driver.findElement(By.xpath("(//*[text()='"+Specilization+"'])[1]"));
+		wait(5);
+		List<WebElement> special=driver.findElements(By.xpath("(//ul[@class='optionContainer'])[3]"));
+		System.out.println(special.size());
+		WebElement specilization=driver.findElement(By.xpath("//*[text()='"+Specilization+"']"));
 		specilization.click();
 		wait(1);
 		clickElement(SelectProjectSkills);
