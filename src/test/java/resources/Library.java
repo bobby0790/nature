@@ -97,15 +97,15 @@ public class Library extends Config
 			public void robotMethod(String data) throws Exception
 			{
 				Robot robot=new Robot();
-				robot.setAutoDelay(3000);
+				robot.setAutoDelay(1000);
 				StringSelection stringselection=new StringSelection(data);
 				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselection,null);
-				robot.setAutoDelay(3000);
+				robot.setAutoDelay(1000);
 				robot.keyPress(KeyEvent.VK_CONTROL);
 				robot.keyPress(KeyEvent.VK_V);
 				robot.keyRelease(KeyEvent.VK_CONTROL);
 				robot.keyRelease(KeyEvent.VK_V);
-				robot.setAutoDelay(3000);
+				robot.setAutoDelay(1000);
 				robot.keyPress(KeyEvent.VK_ENTER);
 				robot.keyRelease(KeyEvent.VK_ENTER);
 				
