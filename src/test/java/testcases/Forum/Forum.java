@@ -1,16 +1,47 @@
 package testcases.Forum;
 
+import java.io.File;
+import java.io.FileInputStream;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import resources.BaseTest;
 
 public class Forum extends BaseTest
 {
+	@DataProvider
+	public Object[][] readData() throws Exception
+	{
+		XSSFWorkbook workbook=new XSSFWorkbook(new FileInputStream(new File("./src/test/java/suites/forum.xlsx")));
+		XSSFSheet sheet=workbook.getSheet("Forum");
+		int rowcount=sheet.getLastRowNum();
+		Object[][] obj=new Object[rowcount][19];
+		for(int i=1; i< rowcount; i++)
+		{
+			Row row=sheet.getRow(i);
+			System.out.println(row.getLastCellNum());
+			for(int j=0;j<18;j++)
+			{
+				row=sheet.getRow(i);
+				Cell cell=row.getCell(j);
+				System.out.println(i+" "+j);
+				obj[i][j]=cell.getStringCellValue();
+			}
+			obj[i][18]=""+i;
+			
+		}
+		return obj;
+	}
 	@Test(dataProvider="getData")
-	public void forum(String tdid, String username, String password, String ForumTitle, String Description, String HashTags1, String HashTags2, String HashTags3, String HashTags4, String HashTags5, String HashTags6, String ForumTitle1, String Description1, String HashTags7, String HashTags8, String HashTags9, String HashTags10) throws Exception
+	public void forum(String tdid, String username, String password, String ForumTitle, String Description, String HashTags1, String HashTags2, String HashTags3, String HashTags4, String HashTags5, String HashTags6, String ForumTitle1, String Description1, String HashTags7, String HashTags8, String HashTags9, String HashTags10, String Status) throws Exception
 	{
 		/*String FilePath="./src/test/java/suites/forum.xlsx";
 		String sheetname="Forum";
@@ -20,6 +51,7 @@ public class Forum extends BaseTest
 		*//*for(int rowNumber=2;rowNumber<rowCount;rowNumber++)
 		{
 		*/
+		//System.out.println(rowNum);
 		test = extent.createTest("Forum");
 		test.pass("Start the Browser");
 		initiateBrowser();
@@ -71,12 +103,12 @@ public class Forum extends BaseTest
 			}
 			if(Description.equals(""))
 			{
-			//if(isDisplayed("//span[text()='Please enter the description']"))
-				//{
+			if(isDisplayed("//span[text()='Please enter the description']"))
+				{
 					sendkeys(TextForumDescription,Description1);
 					//wait(2);
 				}
-			//}
+			}
 			if(HashTags1.equals("") && HashTags2.equals("") && HashTags3.equals("") && HashTags4.equals("") && HashTags5.equals("") && HashTags6.equals(""))
 			{
 				if(driver.findElement(By.xpath("//span[text()='Add at least 1 hashtag']")).isDisplayed())
