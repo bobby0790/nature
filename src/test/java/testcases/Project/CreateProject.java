@@ -1,11 +1,12 @@
 package testcases.Project;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import resources.BaseTest;
@@ -18,6 +19,7 @@ public class CreateProject extends BaseTest
 		test = extent.createTest("Post as Circle");
 		test.pass("Start the Browser");
 		initiateBrowser();
+		WebDriverWait wait = new WebDriverWait(driver, 40);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		clickElement(LoginBtn);
 		wait(1);
@@ -70,20 +72,29 @@ public class CreateProject extends BaseTest
 		wait(1);
 		sendkeys(TextNoOfOpenings, NoOfOpenings);
 		wait(1);
-		/*clickElement(SelectProjectSpecilization);
-		wait(5);
-		driver.findElement(By.xpath("/html/body/div[2]/div/div/div/main/div[2]/div/div/div/div/form/div[9]/div/div[2]/ul/li[1]")).click();
-		List<WebElement> special=driver.findElements(By.xpath("(//ul[@class='optionContainer'])[3]"));
-		System.out.println(special.size());
-		WebElement specilization=driver.findElement(By.xpath("//*[text()='"+Specilization+"']"));
-		specilization.click();
+		//WebElement special=driver.findElement(By.xpath("//label[text()='Specialization ']/..//input[@id='search_input']"));
+		clickElement(SelectProjectSpecilization);
+		wait(10);
+		Actions action=new Actions(driver);
+		//action.moveToElement(special).doubleClick().build().perform();*/
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='"+Specilization+"']/input")));
+		//special.click();
+		wait(10);
+		WebElement spe=driver.findElement(By.xpath("//li[text()='"+Specilization+"']/input"));
+		action=new Actions(driver);
+		action.moveToElement(spe).click().build().perform();
+		
+		//Actions spe=new Actions(driver);
+		//WebElement specilization=driver.findElement(By.xpath("//li[text()='"+Specilization+"']"));
+		//specilization.click();
+		//spe.moveToElement(specilization).click(specilization).build().perform();
 		wait(1);
 		clickElement(SelectProjectSkills);
 		wait(1);
-		WebElement skills=driver.findElement(By.xpath("(//*[text()='"+Skills+"'])[4]"));
+		WebElement skills=driver.findElement(By.xpath("(//li[text()='"+Skills+"'])[3]"));
 		skills.click();
 		wait(1);
-		*/if(!HashTags1.equals("") || !HashTags2.equals("") || !HashTags3.equals("") || !HashTags4.equals("") || !HashTags5.equals("") || !HashTags6.equals(""))
+		if(!HashTags1.equals("") || !HashTags2.equals("") || !HashTags3.equals("") || !HashTags4.equals("") || !HashTags5.equals("") || !HashTags6.equals(""))
 		{
 			String []hashtags=new String[]{HashTags1,HashTags2,HashTags3,HashTags4,HashTags5,HashTags6};
 			for(int j=0;j<6;j++)
@@ -101,7 +112,7 @@ public class CreateProject extends BaseTest
 		for(int j=0;j<5;j++)
 		{
 			if(qualification[j]!="")
-			driver.findElement(By.xpath("//input[contains(@id,'qualification')]")).click();
+			driver.findElement(By.xpath("//input[contains(@id,'qualification"+j+"')]")).sendKeys(qualification[j]);
 			clickElement(ClickQualificationAddMore);
 		}
 		wait(1);
@@ -113,9 +124,12 @@ public class CreateProject extends BaseTest
 		wait(1);
 		sendkeys(TextMediaCoverage, MediaCoverage);
 		wait(1);
-		clickElement(ClickProAgree);
+		Actions ac=new Actions(driver);
+		WebElement element=driver.findElement(By.xpath("//div[@class='custom-control custom-checkbox']//input[@name='isAgree']"));
+		ac.moveToElement(element).click(element).build().perform();
 		wait(1);
 		clickElement(ClickPublish);
 		wait(3);
 	}
+
 }
