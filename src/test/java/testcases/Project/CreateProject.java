@@ -76,6 +76,8 @@ public class CreateProject extends BaseTest
 		clickElement(SelectProjectSpecilization);
 		wait(10);
 		Actions action=new Actions(driver);
+		
+		
 		//action.moveToElement(special).doubleClick().build().perform();*/
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='"+Specilization+"']/input")));
 		//special.click();
